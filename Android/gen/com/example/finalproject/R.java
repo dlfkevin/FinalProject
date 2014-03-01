@@ -31,24 +31,25 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int avatar=0x7f020000;
-        public static final int back=0x7f020001;
-        public static final int button_view=0x7f020002;
-        public static final int ic_launcher=0x7f020003;
-        public static final int login_bg=0x7f020004;
-        public static final int login_cover=0x7f020005;
-        public static final int login_goto_button=0x7f020006;
-        public static final int login_panel=0x7f020007;
-        public static final int password=0x7f020008;
-        public static final int reg_goto=0x7f020009;
-        public static final int username=0x7f02000a;
+        public static final int back=0x7f020000;
+        public static final int button_view=0x7f020001;
+        public static final int head=0x7f020002;
+        public static final int head_bg=0x7f020003;
+        public static final int ic_launcher=0x7f020004;
+        public static final int login_bg=0x7f020005;
+        public static final int login_cover=0x7f020006;
+        public static final int login_goto_button=0x7f020007;
+        public static final int login_panel=0x7f020008;
+        public static final int password=0x7f020009;
+        public static final int reg_goto=0x7f02000a;
+        public static final int username=0x7f02000b;
     }
     public static final class id {
         public static final int action_bar=0x7f09000b;
         public static final int action_settings=0x7f090013;
         public static final int bottom_panel=0x7f090003;
+        public static final int cover_user_photo=0x7f090001;
         public static final int email_input=0x7f09000f;
-        public static final int login_avatar=0x7f090001;
         public static final int login_button=0x7f09000a;
         public static final int login_email=0x7f090006;
         public static final int login_email_panel=0x7f090004;

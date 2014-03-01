@@ -18,12 +18,24 @@
 	        android:layout_height="wrap_content"
 	        android:layout_marginTop="40dp">
 	        
-	        <ImageView
-	            android:id="@+id/login_avatar"
-	            android:src="@drawable/avatar"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_gravity="center_horizontal" />
+			<RelativeLayout
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_gravity="center_horizontal" >
+			
+			    <ImageView
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_centerInParent="true"
+			        android:src="@drawable/head_bg" />
+			    
+				<com.example.finalproject.Widget.CircularImage
+			        android:id="@+id/cover_user_photo"
+			        android:layout_width="96.0dip"
+			        android:layout_height="96.0dip"
+			        android:layout_centerInParent="true" />
+			
+			</RelativeLayout>
 	        
 	        <TextView
 	            android:id="@+id/login_username"
