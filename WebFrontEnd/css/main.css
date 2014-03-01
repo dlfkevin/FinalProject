@@ -5,12 +5,20 @@ html body{
 	padding:0px;
 	background-color:#f9f9f9;
 }
-a{ text-decoration:none;}
+a{
+	color:#000000;
+    text-decoration: none;
+}
 .line{
 	border-top:1px solid #dddddd;
 	width:210px;
 }
-
+.line2{
+	float:left;
+	border-top:1px solid #c1c1c1; 
+	width:760px; 
+	margin:12px 14px 0px;
+}
 /*----------------------------  head  -------------------------*/
 .header {
 	height: 63px;
@@ -45,7 +53,6 @@ a{ text-decoration:none;}
 	width:1000px;
 	margin: 0 auto;
 	margin-top:63px;
-	
 }
 .clearfix {
   *zoom: 1;
@@ -91,10 +98,15 @@ a{ text-decoration:none;}
 	border-width:1px;
 	border-color:#dddddd;
 }
-.icons{
+.icons {
 	float:left;
 	padding-top:15px;
 	margin-left:25px;
+}
+.icons_sel{
+	float:left;
+	padding-top:15px;
+	margin-left:24px;
 }
 .arrow{
 	float:right;
@@ -114,16 +126,18 @@ a{ text-decoration:none;}
 	padding-left:16px;
 	color:#a1a1a1;
 }
+
 /*----------------------------  container mainbody  -------------------------*/
 .mainbody{
 	dispaly:block;
 	float:left;
 	width:788px;
 	background-color:#ffffff;
-	margin-left:210px;
 	border-style:none solid;
 	border-width:1px;
 	border-color:#dddddd;
+	margin-left:210px;
+	padding-bottom:40px;
 }
 .title{
 	dispaly:block;
@@ -139,42 +153,277 @@ a{ text-decoration:none;}
 	float:left;
 	margin-left:14px;
 	margin-top:14px;
+	width:760px;
 }
 td{
 	padding-top:10px;
 	padding-bottom:10px;
+	font-family:arial;
 }
 tr{
 	color:#777777;
+	text-align:center;
+	vertical-align:middle;
 }
+
+/*---------------------------  container mainbody 状态  -------------------------*/
 .btn_accepted{
 	background: url(../images/btn_accepted.png) no-repeat scroll 0 0;
 	width: 54px;
-	height: 35px;
+	height: 29px;
 	border: none;
 	text-indent: -9999px;
 	cursor: pointer;
 	float: left;
-	margin-left:7px;
+	margin-left:6px;
 }
 .btn_accepted:hover {
-	background: url(../images/btn_accepted_sel.png) no-repeat scroll 0 0;
+	background: url(../images/btn_accepted_hover.png) no-repeat scroll 0 0;
 }
 .btn_refuse{
 	background: url(../images/btn_refuse.png) no-repeat scroll 0 0;
 	width: 54px;
-	height: 35px;
+	height: 29px;
 	border: none;
 	text-indent: -9999px;
 	cursor: pointer;
 	float: left;
-	margin-left:7px;
+	margin-left:6px;
 }
 .btn_refuse:hover {
-	background: url(../images/btn_refuse_sel.png) no-repeat scroll 0 0;
+	background: url(../images/btn_refuse_hover.png) no-repeat scroll 0 0;
 }
 
+/*---------------------------  container mainbody 评价  -------------------------*/
+.evaluate_good{
+	background: url(../images/good.png) no-repeat scroll 0 0;
+	width: 27px;
+	height: 27px;
+	border: none;
+	float: left;
+	margin:0px;
+	margin-left:17px;
+}
+.evaluate_bad{
+	background: url(../images/bad.png) no-repeat scroll 0 0;
+	width: 27px;
+	height: 27px;
+	border: none;
+	float: left;
+	margin:0px;
+	margin-left:17px;
+}
 
+/*---------------------------  container mainbody 菜单编辑  -------------------------*/
+.btn_edit{
+	background: url(../images/btn_edit.png) no-repeat scroll 0 0;
+	width: 54px;
+	height: 29px;
+	border: none;
+	text-indent: -9999px;
+	cursor: pointer;
+	float: left;
+	margin-left:6px;
+}
+.btn_edit:hover {
+	background: url(../images/btn_edit_hover.png) no-repeat scroll 0 0;
+}
+.btn_delete{
+	background: url(../images/btn_delete.png) no-repeat scroll 0 0;
+	width: 54px;
+	height: 29px;
+	border: none;
+	text-indent: -9999px;
+	cursor: pointer;
+	float: left;
+	margin-left:6px;
+}
+.btn_delete:hover {
+	background: url(../images/btn_delete_hover.png) no-repeat scroll 0 0;
+}
 
+/*---------------------------  container mainbody 店面详情  -------------------------*/
+.shopInformation{
+	dispaly:block;
+	float:left;
+	margin:20px 71px 20px 71px;
+	width:648px;
+	padding:0px;
+}
+.line3{
+	float:left;
+	border-top:1px solid #f1f1f1;  
+	width:648px;
+	margin:8px 0px 14px;
+}
+.item_title{
+	float: left;
+	display: inline;
+	width: 80px;
+	line-height: 38px;
+	text-align: right;
+	vertical-align:middle;
+}
+.item_detail{
+	float: left;
+	display: inline;
+}
+.item_input{
+	height: 18px;
+	width:250px;
+	line-height: 18px;
+	padding: 9px 8px;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	outline: none;
+	font-size: 16px;
+	overflow: hidden;
+	color: #777777;
+	border: 1px solid #C9CACC;
+	border-bottom: 1px solid #B1B3B5;
+}
+.item_pic{
+	width:456px;
+	height:220px;
+	padding-top:8px;
+}
+.btn_changePic{
+	background: url(../images/btn_pic.png) no-repeat scroll 0 0;
+	width: 76px;
+	height: 29px;
+	border: none;
+	text-indent: -9999px;
+	cursor: pointer;
+	float: left;
+	margin-left:6px;
+}
+.btn_changePic:hover {
+	background: url(../images/btn_pic_hover.png) no-repeat scroll 0 0;
+}
+.btn_saveChagne{
+	background: url(../images/btn_save.png) no-repeat scroll 0 0;
+	width: 54px;
+	height: 29px;
+	border: none;
+	text-indent: -9999px;
+	cursor: pointer;
+	float: left;
+	margin-left:297px;
+	margin-top:3px;
+}
+.btn_saveChagne:hover {
+	background: url(../images/btn_save_hover.png) no-repeat scroll 0 0;
+}
 
+/*----------------------------  footer  -------------------------*/
+.footer{
+	float:left;
+	width:100%;
+	margin: 0 auto;
+}
+.bottom {
+	width:998px;
+	height:49px;
+	margin: 0 auto;
+	background-color:#f1f1f1;
+	border-style:solid solid none solid;
+	border-width:1px;
+	border-color:#dddddd;
+	text-align: center;
+	padding-top:22px;
+	font-size:14px;
+	font-family:arial;
+}
+.login_bottom{
+	width:1000px;
+	height:50px;
+	margin: 0 auto;
+	text-align: center;
+	margin-bottom:20px;
+	font-size:14px;
+	font-family:arial;
+	color:#ffffff;
+}
 
+/*----------------------------  login  -------------------------*/
+#wallpaper{
+	background:url(../images/wallpaper.jpg) no-repeat;
+	background-size:cover;
+}
+.login_body{
+	width:900px;
+	margin:0 auto;
+}
+#login_left{
+	float:left;
+}
+#login_box{
+	width: 360px;
+	height:280px;
+	float:right;
+	background: rgba(0,0,0,.6);
+	border-radius: 8px;
+	padding-top:20px;
+}
+.loginTextBox{
+	float:right;
+	height: 30px;
+	width:280px;
+	padding: 9px 10px;
+	margin:20px 30px 0px;
+	outline: none;
+	font-size: 16px;
+	overflow: hidden;
+	color: #777777;
+	border: none;
+	border-radius: 6px;
+}
+.btn_login{
+	background: url(../images/btn_login.png) no-repeat scroll 0 0;
+	width: 300px;
+	height: 48px;
+	border: none;
+	text-indent: -9999px;
+	cursor: pointer;
+	float: left;
+	margin:30px 30px 0px;
+}
+.btn_login:hover {
+	background: url(../images/btn_login_hover.png) no-repeat scroll 0 0;
+}
+.reg{
+	float:right;
+	margin:0px; 
+	padding-top:16px;
+	margin-right:30px;
+}
+.rememberMe{
+	float:left;
+	margin-top: 16px;
+	margin-left:30px;
+	color:#dbdbdb;
+}
+
+/*----------------------------  register  -------------------------*/
+#register_box{
+	width: 360px;
+	height:322px;
+	float:right;
+	background: rgba(0,0,0,.6);
+	border-radius: 8px;
+	padding-top:20px;
+}
+.btn_register{
+	background: url(../images/btn_register.png) no-repeat scroll 0 0;
+	width: 300px;
+	height: 48px;
+	border: none;
+	text-indent: -9999px;
+	cursor: pointer;
+	float: left;
+	margin:30px 30px 0px;
+}
+.btn_register:hover{
+	background: url(../images/btn_register_hover.png) no-repeat scroll 0 0;
+}

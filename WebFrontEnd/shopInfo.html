@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="好好吃管理系统" />
+<title>菜单信息</title>
+<link type="text/css" rel="stylesheet" href="./css/main.css" />
+<script src="SpryAssets/SpryTabbedPanels.js" type="text/javascript"></script>
+<script  type="text/javascript">
+	window.onload = function(){
+		var height = parseInt(document.documentElement.clientHeight)-136;
+		var div = document.getElementById("mainbody");
+		div.style.minHeight = height+"px";
+	}
+</script>
+<link href="SpryAssets/SpryTabbedPanels.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="header">
+  <div class="top">
+  	<img src="images/logo.png" class="logo" />
+    <span class="user"><a href="login.html">退出</a></span>
+    <span class="user">[username]</span>
+  </div>
+</div>
+
+<div class="container clearfix">
+    <ul class="leftbar">
+    	<a href="undoOrder.html"><li class="liContent"><img src="images/undoOrder.png" class="icons"/>
+        	<span class="normal">未完成订单</span><img src="images/arrow.png" class="arrow"/>
+        </li></a>
+        <div class="line"></div>
+        <a href="allOrders.html"><li class="liContent"><img src="images/allOrder.png" class="icons"/>
+        	<span class="normal">全部订单</span><img src="images/arrow.png" class="arrow"/>
+        </li></a>
+        <div class="line"></div>
+        <a href="menu.html"><li class="liContent"><img src="images/menu.png" class="icons"/>
+        	<span class="normal">菜单信息</span><img src="images/arrow.png" class="arrow"/>
+        </li></a>
+        <a href="#"><li class="liContentSel"><img src="images/shopInfo_sel.png" class="icons_sel"/>
+        	<span class="select">店铺详情</span><img src="images/arrow_sel.png" class="arrow"/>
+        </li></a>
+    </ul>
+    <div class="mainbody" id="mainbody" style="padding-bottom:0px;">
+    	<span class="title">店铺详情</span>
+        <div class="line2"></div>
+        <ul class="shopInformation">
+        	<form name="formInfo" action="#" method="post"><li class="item_title">店名： </li>
+            <li class="item_detail"><input name="shopName" class="item_input" type="text" value="谦君咖喱饭"/></li>
+            <div class="line3"></div>
+            <li class="item_title">密码： </li>
+            <li class="item_detail">
+            	<input name="shopPassword" class="item_input" type="password" value="abdaiefjspdkfeasc1234"/>
+            </li>
+            <div class="line3"></div>
+            <li class="item_title">图片： </li>
+            <li class="item_detail"><img class="item_pic" src="images/shopPic1.jpg" />            	
+            </li>
+            <li class="item_detail" style="margin:200px 0 0 5px">
+            	<input class="btn_changePic" name="changePic" type="button" value="修改图片" />
+            </li>
+            <div class="line3"></div>
+            <input class="btn_saveChagne" name="saveChange" type="submit" value="保存修改" /></form>
+        </ul>
+    </div>
+ 	<div class="clearfix"> </div>
+</div>
+<div class="footer"><div class="bottom">好好吃餐饮管理系统</br>© 2014 Kevin &amp; CJY All rights reserved.</div></div>
+</body>
+</html>
