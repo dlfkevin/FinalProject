@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="action_bar">#f99757</color>
+    <color name="button">#f99757</color>
+    <color name="bgcolor">#f1f1f1</color>
+    <color name="bgcolor_input">#ffffff</color>
+    <color name="title_text">#ffffff</color>
+    <color name="button_selected">#f18d4c</color>
+    <color name="goto_button_unsel">#00ffffff</color>
+    <color name="goto_button_selected">#33ffffff</color>
+
+</resources>
