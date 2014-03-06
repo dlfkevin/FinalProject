@@ -2,15 +2,155 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity" >
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="hello_world" />
+    tools:context=".MainActivity" 
+    android:orientation="horizontal"
+    android:background="#e6e6e6">
+    
+    <!-- 侧栏菜单部分 -->
+    <LinearLayout
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="53.6dp"
+        android:orientation="vertical" >
+        
+        <LinearLayout
+            android:id="@+id/menu_top"
+            android:layout_width="fill_parent"
+            android:layout_height="210dp"
+            android:background="#2e2d2b"
+            android:orientation="vertical" >
+            
+            <RelativeLayout
+                android:id="@+id/avatar_layout"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_marginTop="42dp"
+			    android:layout_gravity="center_horizontal" >
+	            <ImageView
+	                android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_centerInParent="true"
+				    android:src="@drawable/head_bg" />
+	            
+	            <com.example.finalproject.Widget.CircularImage
+				    android:id="@+id/avatar"
+				    android:layout_width="96.0dip"
+				    android:layout_height="96.0dip"
+				    android:layout_centerInParent="true" />
+	            
+	        </RelativeLayout>
+	        
+            <TextView
+	            android:id="@+id/menu_username"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="Life"
+	            android:textSize="20dp"
+	            android:layout_marginTop="8dp"
+	            android:textColor="#ffffff"
+	            android:layout_gravity="center_horizontal" />
+            
+        </LinearLayout>
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/menu_bg"
+            android:paddingTop="8dp" >
+            
+            <ListView
+                android:id="@+id/menuListView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:listSelector="@drawable/menu_item_sel" >
+                
+            </ListView>
+            
+            <Button
+                android:id="@+id/shutdown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="28dp"
+                android:paddingTop="21dp"
+                android:paddingBottom="21dp"
+                android:drawableLeft="@drawable/shutdown"
+                android:background="@drawable/menu_item_sel"
+                android:layout_alignParentBottom="true" />
+	            
+        </RelativeLayout>
+    </LinearLayout>
+    
+    <!-- 主题内容部分 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="#00ffffff" >
+    
+	    <LinearLayout
+	        android:id="@+id/virtual_menu"
+	        android:layout_width="match_parent"
+	        android:layout_height="1dp"
+	        android:orientation="vertical"
+	        android:background="#00ffffff" >
+	        
+	    </LinearLayout>
+	    
+    <RelativeLayout
+	    android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#e6e6e6" >
+        
+	    <ListView  
+	        android:id="@+id/mainListView"  
+	        android:layout_width="match_parent"  
+	        android:layout_height="fill_parent"  
+	        android:divider="@null"  
+	        android:paddingBottom="8dp"
+	        android:paddingLeft="8dp"
+	        android:paddingRight="8dp" 
+	        android:paddingTop="0dp"
+	        android:layout_marginTop="0dp"
+	        android:dividerHeight="8dp"
+	        android:smoothScrollbar="true"
+	        android:scrollbarStyle="outsideOverlay" >  
+	    </ListView>  
+	    
+	    <RelativeLayout
+	        android:id="@+id/action_bar"
+	        android:layout_width="fill_parent"
+	        android:layout_height="46dp"
+	        android:layout_alignParentTop="true"
+	        android:background="#ccff6600">
+	        
+	        <TextView
+	            android:id="@+id/page_name"
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent"
+	            android:gravity="center"
+	            android:text="最热门"
+	            android:textColor="#ffffff"
+	            android:textSize="20dip" />
+	          
+	        <ImageButton
+			    android:id="@+id/menu_button"
+			    android:layout_width="wrap_content"
+			    android:layout_height="46dp"
+			    android:src="@drawable/menu_icon"
+			    android:paddingLeft="16dp"
+			    android:paddingRight="16dp"
+			    android:background="@drawable/menu_button" />
+	
+	    </RelativeLayout>
+    
+    </RelativeLayout>
+     
+    </LinearLayout>
+    
+    
 
 </RelativeLayout>

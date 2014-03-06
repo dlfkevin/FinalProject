@@ -11,14 +11,19 @@ public final class R {
     public static final class attr {
     }
     public static final class color {
-        public static final int action_bar=0x7f050000;
-        public static final int bgcolor=0x7f050002;
-        public static final int bgcolor_input=0x7f050003;
-        public static final int button=0x7f050001;
-        public static final int button_selected=0x7f050005;
-        public static final int goto_button_selected=0x7f050007;
-        public static final int goto_button_unsel=0x7f050006;
-        public static final int title_text=0x7f050004;
+        public static final int action_bar=0x7f040000;
+        public static final int bgcolor=0x7f040002;
+        public static final int bgcolor_input=0x7f040003;
+        public static final int button=0x7f040001;
+        public static final int button_selected=0x7f040005;
+        public static final int button_unsel=0x7f04000a;
+        public static final int content=0x7f040009;
+        public static final int goto_button_selected=0x7f040007;
+        public static final int goto_button_unsel=0x7f040006;
+        public static final int menu=0x7f040008;
+        public static final int menu_item_nor=0x7f04000b;
+        public static final int menu_item_sel=0x7f04000c;
+        public static final int title_text=0x7f040004;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -27,49 +32,83 @@ public final class R {
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
          */
-        public static final int activity_horizontal_margin=0x7f040000;
-        public static final int activity_vertical_margin=0x7f040001;
+        public static final int activity_horizontal_margin=0x7f050000;
+        public static final int activity_vertical_margin=0x7f050001;
     }
     public static final class drawable {
         public static final int back=0x7f020000;
-        public static final int button_view=0x7f020001;
-        public static final int head=0x7f020002;
-        public static final int head_bg=0x7f020003;
-        public static final int ic_launcher=0x7f020004;
-        public static final int login_bg=0x7f020005;
-        public static final int login_cover=0x7f020006;
-        public static final int login_goto_button=0x7f020007;
-        public static final int login_panel=0x7f020008;
-        public static final int password=0x7f020009;
-        public static final int reg_goto=0x7f02000a;
-        public static final int username=0x7f02000b;
+        public static final int backbutton=0x7f020001;
+        public static final int button_view=0x7f020002;
+        public static final int head=0x7f020003;
+        public static final int head_bg=0x7f020004;
+        public static final int ic_launcher=0x7f020005;
+        public static final int login_bg=0x7f020006;
+        public static final int login_cover=0x7f020007;
+        public static final int login_goto_button=0x7f020008;
+        public static final int login_panel=0x7f020009;
+        public static final int menu_bg=0x7f02000a;
+        public static final int menu_button=0x7f02000b;
+        public static final int menu_hot=0x7f02000c;
+        public static final int menu_icon=0x7f02000d;
+        public static final int menu_item_sel=0x7f02000e;
+        public static final int menu_setting=0x7f02000f;
+        public static final int menu_shop=0x7f020010;
+        public static final int password=0x7f020011;
+        public static final int reg_goto=0x7f020012;
+        public static final int shop_bg_0=0x7f020013;
+        public static final int shop_bg_1=0x7f020014;
+        public static final int shop_bg_2=0x7f020015;
+        public static final int shop_bg_3=0x7f020016;
+        public static final int shutdown=0x7f020017;
+        public static final int username=0x7f020018;
     }
     public static final class id {
-        public static final int action_bar=0x7f09000b;
-        public static final int action_settings=0x7f090013;
-        public static final int bottom_panel=0x7f090003;
-        public static final int cover_user_photo=0x7f090001;
-        public static final int email_input=0x7f09000f;
-        public static final int login_button=0x7f09000a;
-        public static final int login_email=0x7f090006;
-        public static final int login_email_panel=0x7f090004;
-        public static final int login_psw=0x7f090009;
-        public static final int login_psw_icon=0x7f090008;
-        public static final int login_psw_panel=0x7f090007;
-        public static final int login_user_icon=0x7f090005;
-        public static final int login_user_info=0x7f090000;
-        public static final int login_username=0x7f090002;
-        public static final int page_name=0x7f09000c;
-        public static final int psw_input=0x7f090011;
-        public static final int psw_sec_input=0x7f090012;
-        public static final int reg_button=0x7f09000d;
-        public static final int reg_form=0x7f09000e;
-        public static final int user_input=0x7f090010;
+        public static final int action_bar=0x7f09000a;
+        public static final int action_settings=0x7f090025;
+        public static final int avatar=0x7f090003;
+        public static final int avatar_layout=0x7f090002;
+        public static final int bottom_panel=0x7f090010;
+        public static final int content=0x7f090008;
+        public static final int cover_user_photo=0x7f09000e;
+        public static final int email_input=0x7f09001d;
+        public static final int item_name=0x7f09001a;
+        public static final int login_button=0x7f090018;
+        public static final int login_email=0x7f090013;
+        public static final int login_email_panel=0x7f090011;
+        public static final int login_psw=0x7f090016;
+        public static final int login_psw_icon=0x7f090015;
+        public static final int login_psw_panel=0x7f090014;
+        public static final int login_user_icon=0x7f090012;
+        public static final int login_user_info=0x7f09000d;
+        public static final int login_username=0x7f09000f;
+        public static final int mainListView=0x7f090009;
+        public static final int menu=0x7f090000;
+        public static final int menuListView=0x7f090005;
+        public static final int menu_button=0x7f09000c;
+        public static final int menu_icon=0x7f090019;
+        public static final int menu_top=0x7f090001;
+        public static final int menu_username=0x7f090004;
+        public static final int page_name=0x7f09000b;
+        public static final int price=0x7f090024;
+        public static final int psw_input=0x7f09001f;
+        public static final int psw_sec_input=0x7f090020;
+        public static final int regButton_jump=0x7f090017;
+        public static final int regPageBack=0x7f09001b;
+        public static final int reg_button=0x7f090021;
+        public static final int reg_form=0x7f09001c;
+        public static final int shop_bg=0x7f090022;
+        public static final int shop_name=0x7f090023;
+        public static final int shutdown=0x7f090006;
+        public static final int user_input=0x7f09001e;
+        public static final int virtual_menu=0x7f090007;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int login=0x7f030001;
-        public static final int register=0x7f030002;
+        public static final int headview=0x7f030001;
+        public static final int login=0x7f030002;
+        public static final int menulist_item=0x7f030003;
+        public static final int register=0x7f030004;
+        public static final int shoplist_item=0x7f030005;
     }
     public static final class menu {
         public static final int main=0x7f080000;

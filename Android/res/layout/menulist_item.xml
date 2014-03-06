@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:paddingTop="14dp"
+    android:paddingBottom="14dp" >
+
+    <ImageView
+        android:id="@+id/menu_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="28dp"
+        android:src="@drawable/menu_hot" />
+
+    <TextView 
+        android:id="@+id/item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="最热门"
+        android:layout_toRightOf="@id/menu_icon"
+        android:layout_marginLeft="26dp"
+        android:textSize="20dp"
+        android:gravity="center_vertical"
+        android:textColor="#ffffff"/>
+    
+</RelativeLayout>

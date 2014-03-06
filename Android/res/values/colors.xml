@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="action_bar">#ccff6600</color>
+    <color name="button">#fb8130</color>
+    <color name="bgcolor">#f1f1f1</color>
+    <color name="bgcolor_input">#ffffff</color>
+    <color name="title_text">#ffffff</color>
+    <color name="button_selected">#fa7a25</color>
+    <color name="goto_button_unsel">#00ffffff</color>
+    <color name="goto_button_selected">#33ffffff</color>
+    <color name="menu">#ff6600</color>
+    <color name="content">#111111</color>
+    <color name="button_unsel">#00ffffff</color>
+    <color name="menu_item_nor">#00000000</color>
+    <color name="menu_item_sel">#1947d6ff</color>
+
+</resources>

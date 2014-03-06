@@ -119,6 +119,7 @@
 			</LinearLayout>
 			
 	        <ImageButton
+	            android:id="@+id/regButton_jump"
 	            android:src="@drawable/reg_goto"
 	            android:layout_width="wrap_content"
 	            android:layout_height="36dp"
