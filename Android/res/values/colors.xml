@@ -6,7 +6,7 @@
     <color name="bgcolor">#f1f1f1</color>
     <color name="bgcolor_input">#ffffff</color>
     <color name="title_text">#ffffff</color>
-    <color name="button_selected">#fa7a25</color>
+    <color name="button_selected">#ef6f1d</color>
     <color name="goto_button_unsel">#00ffffff</color>
     <color name="goto_button_selected">#33ffffff</color>
     <color name="menu">#ff6600</color>
@@ -14,5 +14,9 @@
     <color name="button_unsel">#00ffffff</color>
     <color name="menu_item_nor">#00000000</color>
     <color name="menu_item_sel">#1947d6ff</color>
+    <color name="logout_unsel">#ec2f2f</color>
+    <color name="logout_sel">#e31b1b</color>
+    <color name="white">#ffffff</color>
+    <color name="gray">#fafafa</color>
 
 </resources>

@@ -1,0 +1,136 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@color/bgcolor" >
+    
+    <com.example.finalproject.Widget.BackTitleBar
+        android:id="@+id/settings_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        
+    </com.example.finalproject.Widget.BackTitleBar>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp" >
+        
+        <RelativeLayout
+            android:id="@+id/setavatar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@drawable/setitem"
+            android:layout_marginBottom="8dp"
+            android:clickable="true" >
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="头像"
+                android:textColor="#2e2d2b"
+                android:textSize="16sp"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:layout_alignParentLeft="true" />
+            
+            <ImageView
+		        android:id="@+id/setting_goto"
+		        android:src="@drawable/item_goto"
+		        android:layout_width="wrap_content"
+		        android:layout_height="match_parent"
+		        android:layout_alignParentRight="true"
+		        android:layout_marginRight="10dp" />
+            
+            <ImageView
+                android:id="@+id/avatar"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/avatar_s"
+        		android:layout_toLeftOf="@id/setting_goto"
+        		android:layout_marginRight="16dp" />
+            
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/setusername_layout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/setitem"
+            android:layout_marginBottom="8dp"
+            android:clickable="true" >
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="用户名"
+                android:textColor="#2e2d2b"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp" />
+            
+            <ImageView
+		        android:id="@+id/setting_goto"
+		        android:src="@drawable/item_goto"
+		        android:layout_width="wrap_content"
+		        android:layout_height="match_parent"
+		        android:layout_alignParentRight="true"
+		        android:layout_marginRight="10dp" />
+            
+            <TextView
+		        android:id="@+id/set_item_username"
+		        android:layout_width="wrap_content"
+		        android:layout_height="match_parent"
+		        android:gravity="center_vertical"
+		        android:text="Life"
+		        android:textSize="16sp"
+		        android:textColor="#8d8d8d"
+		        android:layout_toLeftOf="@id/setting_goto"
+		        android:layout_marginRight="16dp" />
+            
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/setpw_layout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/setitem"
+            android:layout_marginBottom="8dp"
+            android:clickable="true" >
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="密码"
+                android:textColor="#2e2d2b"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp" />
+            
+            <ImageView
+		        android:id="@+id/setting_goto"
+		        android:src="@drawable/item_goto"
+		        android:layout_width="wrap_content"
+		        android:layout_height="match_parent"
+		        android:layout_alignParentRight="true"
+		        android:layout_marginRight="10dp" />
+            
+        </RelativeLayout>
+        
+        <Button
+            android:id="@+id/logoutButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="退出登录"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/logoutbutton"
+            android:layout_marginTop="12dp" />
+    </LinearLayout>
+    
+</LinearLayout>

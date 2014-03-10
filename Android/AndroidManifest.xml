@@ -34,6 +34,36 @@
         	android:theme="@android:style/Theme.Black.NoTitleBar" >
             
         </activity>
+        <activity
+            android:name="com.example.finalproject.BaseUI.SettingsActivity"
+            android:label="@string/app_name"
+        	android:theme="@android:style/Theme.Black.NoTitleBar" >
+            
+        </activity>
+        <activity
+            android:name="com.example.finalproject.BaseUI.setUsernameActivity"
+            android:label="@string/app_name"
+        	android:theme="@android:style/Theme.Black.NoTitleBar" >
+            
+        </activity>
+        <activity
+            android:name="com.example.finalproject.BaseUI.setpwActivity"
+            android:label="@string/app_name"
+        	android:theme="@android:style/Theme.Black.NoTitleBar" >
+            
+        </activity>
+        <activity
+            android:name="com.example.finalproject.BaseUI.myOrderActivity"
+            android:label="@string/app_name"
+        	android:theme="@android:style/Theme.Black.NoTitleBar" >
+            
+        </activity>
+        <activity
+            android:name="com.example.finalproject.BaseUI.OrderDetailActivity"
+            android:label="@string/app_name"
+        	android:theme="@android:style/Theme.Black.NoTitleBar" >
+            
+        </activity>
     </application>
 
 </manifest>

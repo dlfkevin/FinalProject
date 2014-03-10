@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@color/bgcolor" >
+    
+    <com.example.finalproject.Widget.BackTitleBar
+        android:id="@+id/myorder_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        
+    </com.example.finalproject.Widget.BackTitleBar>
+    
+    <ListView
+        android:id="@+id/order_ListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#d9d9d9"
+        android:dividerHeight="1dp"
+        android:padding="8dp"
+		android:smoothScrollbar="true"
+		android:scrollbarStyle="outsideOverlay" >
+        
+    </ListView>
+    
+</LinearLayout>

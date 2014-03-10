@@ -6,33 +6,12 @@
     android:orientation="vertical"
     android:background="@color/bgcolor" >
     
-    <RelativeLayout
-        android:id="@+id/action_bar"
-        android:layout_width="fill_parent"
-        android:layout_height="46dp"
-        android:orientation="horizontal"
-        android:layout_alignParentTop="true"
-        android:background="@color/action_bar">
+    <com.example.finalproject.Widget.BackTitleBar
+        android:id="@+id/reg_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
         
-        <TextView
-            android:id="@+id/page_name"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:gravity="center"
-            android:text="@string/page_name_reg"
-            android:textColor="@color/title_text"
-            android:textSize="20dip" />
-        
-        <ImageButton
-		    android:id="@+id/regPageBack"
-		    android:layout_width="wrap_content"
-		    android:layout_height="46dp"
-		    android:src="@drawable/back"
-		    android:background="@drawable/backbutton"
-		    android:paddingLeft="12dp"
-		    android:paddingRight="16dp" />
-
-    </RelativeLayout>
+    </com.example.finalproject.Widget.BackTitleBar>
 
     <LinearLayout
         android:id="@+id/reg_form"

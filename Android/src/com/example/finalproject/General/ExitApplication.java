@@ -29,4 +29,10 @@ public class ExitApplication extends Application{
 		}
 		System.exit(0);
 	}
+	//Ö»finishËùÓÐActivity
+	public void ActivityFinish(){
+		for(Activity activity:activityList){
+			activity.finish();
+		}
+	}
 }

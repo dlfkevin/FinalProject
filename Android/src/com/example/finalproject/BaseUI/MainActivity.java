@@ -13,6 +13,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Point;
 import android.view.Display;
 import android.view.KeyEvent;
@@ -57,6 +58,8 @@ public class MainActivity extends Activity implements OnTouchListener{
 	private List<LeftMenuCard> menu_data = new ArrayList<LeftMenuCard>();
 	private ImageButton menu_but;
 	private Button shutdownButton;
+	private ListView menuListView;
+	private ListView mListView;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -94,10 +97,11 @@ public class MainActivity extends Activity implements OnTouchListener{
 		shutdownButton = (Button) findViewById(R.id.shutdown);
 		menuButtonClick(menu_but);
 		shutdownButtonClick(shutdownButton);
+		
 	}
 	
 	private void initContentList(){
-		ListView mListView = (ListView) findViewById(R.id.mainListView);
+		mListView = (ListView) findViewById(R.id.mainListView);
 		mListView.addHeaderView(LayoutInflater.from(this).inflate(R.layout.headview, null));
 		initDataShoplist();
 		shopCardAdapter mAdapter = new shopCardAdapter(data,this);
@@ -109,10 +113,13 @@ public class MainActivity extends Activity implements OnTouchListener{
 		CircularImage cover_user_photo = (CircularImage) findViewById(R.id.avatar);
 		cover_user_photo.setImageResource(R.drawable.head);
 		
-		ListView menuListView = (ListView) findViewById(R.id.menuListView);
+		menuListView = (ListView) findViewById(R.id.menuListView);
 		initDataMenuList();
 		LeftMenuCardAdapter mAdapter = new LeftMenuCardAdapter(menu_data,this);
 		menuListView.setAdapter(mAdapter);
+		
+		//监听menuListView里的item点击事件
+		menuItemListener(menuListView);
 	}
 
 	public void menuButtonClick(ImageButton ib){
@@ -282,15 +289,14 @@ public class MainActivity extends Activity implements OnTouchListener{
 	}
 	
 	private void initDataMenuList() {
-		
+		LeftMenuCard card;
 		int[] bgId = new int[]{R.drawable.menu_hot, R.drawable.menu_shop,
 				R.drawable.username, R.drawable.menu_setting};
 		String[] item_name = new String[]{"最热门", "全部店铺",
 				"我的订单", "设置"};
 		
 		for(int i=0;i<4;i++){
-			
-			LeftMenuCard card = new LeftMenuCard(bgId[i], item_name[i]);
+			card = new LeftMenuCard(bgId[i], item_name[i]);
 			menu_data.add(card);
 		}
 	}
@@ -307,6 +313,26 @@ public class MainActivity extends Activity implements OnTouchListener{
             return true;
         }
         return super.onKeyDown(keyCode, event);
+	}
+	
+	public void menuItemListener(ListView mListView){
+		mListView.setOnItemClickListener(new OnItemClickListener() {
+			@Override   
+	        public void onItemClick(AdapterView<?> parent, View view, int position, long id){
+				if(id<-1) {
+			        // 点击的是headerView或者footerView
+			        return;
+			    }else if (id == 0) {
+					scrollToContent();
+				}else if (id == 2) {
+					Intent intent = new Intent(MainActivity.this, myOrderActivity.class); 
+					startActivity(intent);
+				}else if(id == 3){
+					Intent intent = new Intent(MainActivity.this, SettingsActivity.class); 
+					startActivity(intent);
+				}
+			}
+		});
 	}
 
 }
