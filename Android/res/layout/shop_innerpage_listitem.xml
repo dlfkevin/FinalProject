@@ -1,0 +1,193 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp" >
+        
+        <TextView
+            android:id="@+id/item_shop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="陈罐西式茶饼屋"
+            android:textSize="22sp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="14dp"
+            android:gravity="center_vertical" />
+        
+        <LinearLayout
+            android:id="@+id/single_item_amount_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:layout_marginRight="10dp" >
+            
+            <ImageButton
+                android:id="@+id/shop_menu_item_minus"
+                android:src="@drawable/minus"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:background="@null" />
+            
+            <TextView
+                android:id="@+id/order_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="1"
+                android:textSize="26sp"
+                android:textColor="@color/black" />
+            
+            <ImageButton
+                android:id="@+id/shop_menu_item_plus"
+                android:src="@drawable/plus"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:background="@null" />
+            
+        </LinearLayout>
+        
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:orientation="vertical"
+        android:background="@color/gray" ></LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:orientation="horizontal" >
+        
+        <LinearLayout
+            android:id="@+id/single_price_layout"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+            
+            <ImageView
+                android:src="@drawable/single_price"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="14dp" />
+            
+            <TextView
+                android:id="@+id/single_price_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="￥20"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginLeft="10dp" />
+            
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/gray" ></LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/single_day_orders_layout"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+            
+            <ImageView
+                android:src="@drawable/single_day_orders"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="14dp" />
+            
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical" >
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="今日下单"
+                    android:textColor="@color/deep_gray"
+                    android:textSize="10sp" />
+                
+                <TextView
+                    android:id="@+id/single_day_orders"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1234"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+                
+            </LinearLayout>
+            
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/gray" ></LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/order_comment_layout"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+            
+            <ImageView
+                android:src="@drawable/order_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="14dp" />
+            
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical" >
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="历史点赞"
+                    android:textColor="@color/deep_gray"
+                    android:textSize="10sp" />
+                
+                <TextView
+                    android:id="@+id/order_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1234"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+                
+            </LinearLayout>
+            
+        </LinearLayout>
+        
+    </LinearLayout>
+    
+</LinearLayout>

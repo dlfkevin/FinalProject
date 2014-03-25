@@ -1,17 +1,27 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" 
+	tools:context=".MainActivity"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" 
-    tools:context=".MainActivity"
-    android:orientation="vertical"
+    android:layout_height="match_parent"
     android:background="@color/bgcolor" >
-    
+	
     <com.example.finalproject.Widget.BackTitleBar
         android:id="@+id/orderdetail_titlebar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" >
         
     </com.example.finalproject.Widget.BackTitleBar>
+
+    <ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+    	android:layout_marginTop="46dp" >
+    
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
     
     <LinearLayout
         android:layout_width="match_parent"
@@ -152,15 +162,16 @@
 	            android:textSize="16sp"
 	            android:textColor="#919191"
 	            android:gravity="center_horizontal" />
-	    
-		    <ListView
-		        android:id="@+id/orderdetail_list"
-		        android:layout_width="match_parent"
-		        android:layout_height="wrap_content"
-		        android:divider="@null"
-		        android:dividerHeight="0dp" ></ListView>
 	        
 	    </RelativeLayout>
+	    
+	    <ListView
+	        android:id="@+id/orderdetail_list"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:divider="@null"
+	        android:dividerHeight="0dp" >
+		</ListView>
 	    
     </LinearLayout>
     
@@ -238,3 +249,7 @@
     </LinearLayout>
     
 </LinearLayout>
+
+</ScrollView>
+
+</RelativeLayout>

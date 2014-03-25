@@ -7,6 +7,7 @@ import com.example.finalproject.R;
 import com.example.finalproject.Adapter.OrderdetailAdapter;
 import com.example.finalproject.Adapter.OrderdetailCard;
 import com.example.finalproject.General.ExitApplication;
+import com.example.finalproject.General.SetListViewHeight;
 import com.example.finalproject.Widget.BackTitleBar;
 
 import android.app.Activity;
@@ -30,6 +31,7 @@ public class OrderDetailActivity extends Activity{
 		ExitApplication.getInstance().addActivity(this);
 		
 		initListView();
+		SetListViewHeight.setListViewHeightBasedOnChildren(mListView);
 		
 		btb = (BackTitleBar) this.findViewById(R.id.orderdetail_titlebar);
 		pageback = (ImageButton) this.findViewById(R.id.Backbutton);
@@ -49,11 +51,11 @@ public class OrderDetailActivity extends Activity{
 	
 	public void initData(){
 		OrderdetailCard card;
-		String[] detailname = new String[]{"œ„πΩ»‚∆¨", "”„œ„«—◊”", "¡π∞Ë≥¥º¶µ∞"};
-		int[] price = new int[]{10, 9, 8};
-		int[] count = new int[]{1, 1, 1};
+		String[] detailname = new String[]{"œ„πΩ»‚∆¨", "”„œ„«—◊”", "¡π∞Ë≥¥º¶µ∞", "¥Û¥–∞Ë∂π∏Ø", "º´∆∑∫⁄ƒæ∂˙"};
+		int[] price = new int[]{10, 9, 8, 11, 12};
+		int[] count = new int[]{1, 1, 1, 2, 3};
 		
-		for (int i = 1; i<=3; i++){
+		for (int i = 0; i < detailname.length; i++){
 			card = new OrderdetailCard(detailname[i], price[i], count[i]);
 			data.add(card);
 		}

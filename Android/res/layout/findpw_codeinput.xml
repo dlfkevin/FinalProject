@@ -1,0 +1,84 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@color/bgcolor" >
+    
+    <com.example.finalproject.Widget.BackTitleBar
+        android:id="@+id/findpw_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        
+    </com.example.finalproject.Widget.BackTitleBar>
+    
+    <LinearLayout
+        android:id="@+id/findpw_warnning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+     	android:background="#ffffff" >
+            
+        <ImageView 
+            android:src="@drawable/tick"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"/>
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="10dp"
+            android:text="验证码已发送成功"
+            android:textColor="#2e2d2b"
+            android:textSize="16sp" />
+            
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp" >
+        
+        
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="请输入验证码"
+            android:textSize="20sp"
+            android:textColor="#2e2d2b"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="6dp" />
+        
+        <EditText
+	        android:id="@+id/oldpw"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:singleLine="true"
+	        android:background="@color/bgcolor_input"
+	        android:paddingTop="10dp"
+	        android:paddingBottom="10dp"
+	        android:paddingLeft="18dp"
+	        android:paddingRight="18dp"
+	        android:textSize="20sp"
+	        android:textColor="#2e2d2b"
+	        android:layout_marginTop="8dp" />
+        
+        <Button
+            android:id="@+id/setpw_nextstep"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="下一步"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:background="@drawable/button_view"
+            android:layout_marginTop="30dp" />
+    </LinearLayout>
+    
+</LinearLayout>

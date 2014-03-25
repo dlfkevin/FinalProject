@@ -23,15 +23,6 @@ public class BackTitleBar extends RelativeLayout{
 		LayoutInflater inflater=(LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		inflater.inflate(R.layout.back_titlebar, this);
 		tv=(TextView)findViewById(R.id.page_name);
-		/**
-		ib.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				
-			}
-		});**/
 	}
 	
 	public void setTextResource(String str){

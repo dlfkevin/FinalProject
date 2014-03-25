@@ -44,14 +44,14 @@
 		        android:layout_height="match_parent"
 		        android:layout_alignParentRight="true"
 		        android:layout_marginRight="10dp" />
-            
+
             <ImageView
-                android:id="@+id/avatar"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:src="@drawable/avatar_s"
-        		android:layout_toLeftOf="@id/setting_goto"
-        		android:layout_marginRight="16dp" />
+                android:id="@+id/setting_avatar"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="14dp"
+                android:layout_toLeftOf="@+id/setting_goto" />
             
         </RelativeLayout>
         
@@ -86,7 +86,7 @@
 		        android:layout_width="wrap_content"
 		        android:layout_height="match_parent"
 		        android:gravity="center_vertical"
-		        android:text="Life"
+		        android:text=""
 		        android:textSize="16sp"
 		        android:textColor="#8d8d8d"
 		        android:layout_toLeftOf="@id/setting_goto"

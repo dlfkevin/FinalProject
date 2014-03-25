@@ -1,0 +1,26 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#ffffff" >
+            
+    <ImageView 
+        android:src="@drawable/cross"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="20dp"/>
+        
+    <TextView
+        android:id="@+id/wanning_content"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="14dp"
+        android:layout_marginLeft="10dp"
+        android:text="您所拨打的电话已关机"
+        android:textColor="#2e2d2b"
+        android:textSize="16sp" />
+            
+</LinearLayout>

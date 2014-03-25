@@ -13,93 +13,108 @@
         
     </com.example.finalproject.Widget.BackTitleBar>
     
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="12dp" >
-        
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="旧密码"
-            android:textSize="20dp"
-            android:textColor="#2e2d2b"
-            android:layout_marginLeft="18dp"
-            android:layout_marginTop="6dp" />
-        
-        <EditText
-	        android:id="@+id/oldpw"
+        android:layout_height="wrap_content" >
+    
+	    <com.example.finalproject.Widget.WanningTag
+	        android:id="@+id/wanning_layout"
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
-	        android:singleLine="true"
-	        android:background="@color/bgcolor_input"
-	        android:paddingTop="10dp"
-	        android:paddingBottom="10dp"
-	        android:paddingLeft="18dp"
-	        android:paddingRight="18dp"
-	        android:textSize="20dp"
-	        android:textColor="#2e2d2b"
-	        android:layout_marginTop="8dp"
-	        android:password="true" />
-        
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="请输入新密码"
-            android:textSize="20dp"
-            android:textColor="#2e2d2b"
-            android:layout_marginLeft="18dp"
-            android:layout_marginTop="18dp" />
-        
-        <EditText
-	        android:id="@+id/newpw"
+	        android:visibility="invisible" >
+	        
+	    </com.example.finalproject.Widget.WanningTag>
+	    
+	    <LinearLayout
+	        android:id="@+id/setpw_mainbody"
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
-	        android:singleLine="true"
-	        android:background="@color/bgcolor_input"
-	        android:paddingTop="10dp"
-	        android:paddingBottom="10dp"
-	        android:paddingLeft="18dp"
-	        android:paddingRight="18dp"
-	        android:textSize="20dp"
-	        android:textColor="#2e2d2b"
-	        android:layout_marginTop="8dp"
-	        android:password="true" />
-        
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="确认新密码"
-            android:textSize="20dp"
-            android:textColor="#2e2d2b"
-            android:layout_marginLeft="18dp"
-            android:layout_marginTop="18dp" />
-        
-        <EditText
-	        android:id="@+id/newpw_sec"
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:singleLine="true"
-	        android:background="@color/bgcolor_input"
-	        android:paddingTop="10dp"
-	        android:paddingBottom="10dp"
-	        android:paddingLeft="18dp"
-	        android:paddingRight="18dp"
-	        android:textSize="20dp"
-	        android:textColor="#2e2d2b"
-	        android:layout_marginTop="8dp"
-	        android:password="true" />
-        
-        <Button
-            android:id="@+id/setpw_submit"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="提交修改"
-            android:textSize="20dp"
-            android:textColor="#ffffff"
-            android:background="@drawable/button_view"
-            android:layout_marginTop="30dp" />
-    </LinearLayout>
+	        android:orientation="vertical"
+	        android:padding="12dp" >
+	        
+	        <TextView
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:text="旧密码"
+	            android:textSize="20sp"
+	            android:textColor="#2e2d2b"
+	            android:layout_marginLeft="18dp"
+	            android:layout_marginTop="6dp" />
+	        
+	        <EditText
+		        android:id="@+id/oldpw"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:singleLine="true"
+		        android:background="@color/bgcolor_input"
+		        android:paddingTop="10dp"
+		        android:paddingBottom="10dp"
+		        android:paddingLeft="18dp"
+		        android:paddingRight="18dp"
+		        android:textSize="20sp"
+		        android:textColor="#2e2d2b"
+		        android:layout_marginTop="8dp"
+		        android:password="true" />
+	        
+	        <TextView
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:text="请输入新密码"
+	            android:textSize="20sp"
+	            android:textColor="#2e2d2b"
+	            android:layout_marginLeft="18dp"
+	            android:layout_marginTop="18dp" />
+	        
+	        <EditText
+		        android:id="@+id/newpw"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:singleLine="true"
+		        android:background="@color/bgcolor_input"
+		        android:paddingTop="10dp"
+		        android:paddingBottom="10dp"
+		        android:paddingLeft="18dp"
+		        android:paddingRight="18dp"
+		        android:textSize="20sp"
+		        android:textColor="#2e2d2b"
+		        android:layout_marginTop="8dp"
+		        android:password="true" />
+	        
+	        <TextView
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:text="确认新密码"
+	            android:textSize="20sp"
+	            android:textColor="#2e2d2b"
+	            android:layout_marginLeft="18dp"
+	            android:layout_marginTop="18dp" />
+	        
+	        <EditText
+		        android:id="@+id/newpw_sec"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:singleLine="true"
+		        android:background="@color/bgcolor_input"
+		        android:paddingTop="10dp"
+		        android:paddingBottom="10dp"
+		        android:paddingLeft="18dp"
+		        android:paddingRight="18dp"
+		        android:textSize="20sp"
+		        android:textColor="#2e2d2b"
+		        android:layout_marginTop="8dp"
+		        android:password="true" />
+	        
+	        <Button
+	            android:id="@+id/setpw_submit"
+	            android:layout_width="match_parent"
+	            android:layout_height="50dp"
+	            android:text="提交修改"
+	            android:textSize="20sp"
+	            android:textColor="#ffffff"
+	            android:background="@drawable/button_view"
+	            android:layout_marginTop="30dp" />
+	    </LinearLayout>
+    
+    </RelativeLayout>
     
 </LinearLayout>

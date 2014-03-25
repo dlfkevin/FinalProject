@@ -1,20 +1,29 @@
 package com.example.finalproject.BaseUI;
 
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.zip.Inflater;
 
 import com.example.finalproject.R;
 import com.example.finalproject.Adapter.*;
+import com.example.finalproject.General.AvatarProcess;
 import com.example.finalproject.General.ExitApplication;
 import com.example.finalproject.Widget.CircularImage;
 
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Point;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.view.Display;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -60,6 +69,11 @@ public class MainActivity extends Activity implements OnTouchListener{
 	private Button shutdownButton;
 	private ListView menuListView;
 	private ListView mListView;
+	private Intent motherIntent;
+	private TextView menu_username;
+	private CircularImage menu_avatar;
+	private String current_username, current_password, current_avatar;
+	private int[] shopID;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -100,19 +114,25 @@ public class MainActivity extends Activity implements OnTouchListener{
 		
 	}
 	
+	//主页面初始化
 	private void initContentList(){
 		mListView = (ListView) findViewById(R.id.mainListView);
 		mListView.addHeaderView(LayoutInflater.from(this).inflate(R.layout.headview, null));
 		initDataShoplist();
 		shopCardAdapter mAdapter = new shopCardAdapter(data,this);
 		mListView.setAdapter(mAdapter);
+		int shopAmount = mListView.getCount();
+		shopID = new int[shopAmount];
+		ShopListListener(mListView);
 	}
 	
+	//侧栏初始化
 	private void initMenuList(){
 		
-		CircularImage cover_user_photo = (CircularImage) findViewById(R.id.avatar);
-		cover_user_photo.setImageResource(R.drawable.head);
+		//初始化用户名和头像的信息
+		initUserInfo();
 		
+		//初始化侧栏的ListView
 		menuListView = (ListView) findViewById(R.id.menuListView);
 		initDataMenuList();
 		LeftMenuCardAdapter mAdapter = new LeftMenuCardAdapter(menu_data,this);
@@ -315,6 +335,7 @@ public class MainActivity extends Activity implements OnTouchListener{
         return super.onKeyDown(keyCode, event);
 	}
 	
+	//侧栏ListView的监听方法实现
 	public void menuItemListener(ListView mListView){
 		mListView.setOnItemClickListener(new OnItemClickListener() {
 			@Override   
@@ -322,17 +343,70 @@ public class MainActivity extends Activity implements OnTouchListener{
 				if(id<-1) {
 			        // 点击的是headerView或者footerView
 			        return;
-			    }else if (id == 0) {
+			    }else if (id == 0) {//点击最热门
 					scrollToContent();
-				}else if (id == 2) {
+				}else if (id == 1) {//点击全部店铺
+					
+				}else if (id == 2) {//点击我的订单
 					Intent intent = new Intent(MainActivity.this, myOrderActivity.class); 
 					startActivity(intent);
-				}else if(id == 3){
+				}else if(id == 3){//点击设置
 					Intent intent = new Intent(MainActivity.this, SettingsActivity.class); 
-					startActivity(intent);
+					intent.putExtra("username", current_username);//传用户名过去
+					intent.putExtra("password", current_password);//传密码过去
+					intent.putExtra("avatar", current_avatar);//传头像过去
+					startActivityForResult(intent, 0);//requestCode设置为0
 				}
 			}
 		});
 	}
+	
+	//店铺ListView的监听方法实现
+		public void ShopListListener(ListView mListView){
+			mListView.setOnItemClickListener(new OnItemClickListener() {
+				@Override   
+		        public void onItemClick(AdapterView<?> parent, View view, int position, long id){
+					Intent intent = new Intent(MainActivity.this, ShopDetailActivity.class);
+					startActivity(intent);
+				}
+			});
+		}
 
+	//Activity回调的重写
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		if (resultCode == 0) {//从SettingsActivity回来
+			Bundle newuserinfo = data.getExtras();
+			current_username = newuserinfo.getString("username");
+			current_password = newuserinfo.getString("password");
+			current_avatar = newuserinfo.getString("avatar");
+			//解码头像
+			Bitmap newAvatarBitmap = AvatarProcess.Base64ToBitmap(current_avatar);
+			Drawable NewAvatarDrawable = new BitmapDrawable(getResources(), newAvatarBitmap);
+			
+			//更新修改后的用户名和头像
+			menu_username.setText(current_username);
+			menu_avatar.setImageDrawable(NewAvatarDrawable);
+		}
+		super.onActivityResult(requestCode, resultCode, data);
+	}
+	
+	//初始化menu里的用户名和头像
+	public void initUserInfo(){
+		
+		//用户名初始化
+		current_username = "Life";
+		menu_username = (TextView) this.findViewById(R.id.menu_username);
+		menu_username.setText(current_username);
+		
+		//头像初始化
+		menu_avatar = (CircularImage) findViewById(R.id.menu_avatar);
+		menu_avatar.setImageResource(R.drawable.head);
+		InputStream is = getResources().openRawResource(R.drawable.head);
+		Bitmap avatarBitmap = BitmapFactory.decodeStream(is);
+		current_avatar = AvatarProcess.BitmapToBase64(avatarBitmap);
+		
+		//密码初始化
+		current_password = "hello123";
+	}
 }

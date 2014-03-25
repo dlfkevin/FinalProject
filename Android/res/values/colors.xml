@@ -18,5 +18,7 @@
     <color name="logout_sel">#e31b1b</color>
     <color name="white">#ffffff</color>
     <color name="gray">#fafafa</color>
+    <color name="deep_gray">#d5d5d5</color>
+    <color name="black">#000000</color>
 
 </resources>

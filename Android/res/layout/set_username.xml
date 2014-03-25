@@ -23,7 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="请输入您要修改的用户名"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textColor="#2e2d2b"
             android:layout_marginLeft="18dp" />
         
@@ -37,8 +37,8 @@
 	        android:paddingBottom="10dp"
 	        android:paddingLeft="18dp"
 	        android:paddingRight="18dp"
-	        android:text="Life"
-	        android:textSize="20dp"
+	        android:text=""
+	        android:textSize="20sp"
 	        android:textColor="#2e2d2b"
 	        android:layout_marginTop="14dp" />
         
@@ -47,7 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="提交修改"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textColor="#ffffff"
             android:background="@drawable/button_view"
             android:layout_marginTop="30dp" />

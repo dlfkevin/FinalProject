@@ -7,6 +7,7 @@ import java.util.Date;
 
 public class TimeStamp {
 	
+	//获得当前时间的时间戳
 	public static String getCurrentTime(){
 		String curTime = null;
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日 HH:mm");

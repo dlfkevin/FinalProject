@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    tools:context=".MainActivity"
+    android:background="@color/bgcolor" >
+    
+    <com.example.finalproject.Widget.BackTitleBar
+        android:id="@+id/shop_innerpage_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        
+    </com.example.finalproject.Widget.BackTitleBar>
+    
+    <ListView
+        android:id="@+id/shop_innerpage_menulist"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="46dp"
+        android:layout_marginBottom="66dp"
+        android:divider="@null"
+        android:paddingLeft="8dp"
+        android:paddingTop="8dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="2dp"
+		android:dividerHeight="8dp"
+		android:smoothScrollbar="true"
+		android:scrollbarStyle="outsideOverlay" >
+        
+    </ListView>
+    
+    <RelativeLayout
+        android:id="@+id/bottom_panel"
+        android:layout_width="fill_parent"
+        android:layout_height="66dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff">
+        
+	    <TextView
+	        android:id="@+id/shop_innerpage_price_sum"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:text="总计：￥20"
+	        android:textSize="20sp"
+	        android:textColor="#fb8130"
+	        android:layout_marginLeft="16dp"
+	        android:gravity="center_vertical" />
+	    
+	    <ImageButton
+	        android:id="@+id/shop_innerpage_order_ok"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_centerVertical="true"
+	        android:layout_marginRight="20dp"
+			android:background="@drawable/order_submit_button" />
+    
+    </RelativeLayout>
+    
+</RelativeLayout>

@@ -18,7 +18,8 @@
             android:id="@+id/menu_top"
             android:layout_width="fill_parent"
             android:layout_height="210dp"
-            android:background="#2e2d2b"
+            android:background="@drawable/menu_head_bg"
+        	android:scaleType="centerCrop"
             android:orientation="vertical" >
             
             <RelativeLayout
@@ -34,7 +35,7 @@
 				    android:src="@drawable/head_bg" />
 	            
 	            <com.example.finalproject.Widget.CircularImage
-				    android:id="@+id/avatar"
+				    android:id="@+id/menu_avatar"
 				    android:layout_width="96.0dip"
 				    android:layout_height="96.0dip"
 				    android:layout_centerInParent="true" />
@@ -108,7 +109,7 @@
 		    <ListView  
 		        android:id="@+id/mainListView"  
 		        android:layout_width="match_parent"  
-		        android:layout_height="fill_parent"  
+		        android:layout_height="match_parent"  
 		        android:divider="@null"  
 		        android:paddingBottom="8dp"
 		        android:paddingLeft="8dp"

@@ -6,11 +6,10 @@
 
     <ImageView
         android:id="@+id/shop_bg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scaleType="fitCenter"
-        android:src="@drawable/shop_bg_0"
-         />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/shop_bg_0" />
 
     <RelativeLayout
         android:layout_width="fill_parent"
