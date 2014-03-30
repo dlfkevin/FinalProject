@@ -7,10 +7,11 @@ import android.app.Activity;
 import android.app.Application;
 
 public class ExitApplication extends Application{
-	private List<Activity> activityList=new LinkedList<Activity>();
+	private List<Activity> activityList = new LinkedList<Activity>();
 	private static ExitApplication instance;
 	
 	private ExitApplication(){}
+	
 	//单例模式中获取唯一的ExitApplication 实例
 	public static ExitApplication getInstance(){
 		if(null == instance){

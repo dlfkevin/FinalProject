@@ -151,7 +151,7 @@
 			        android:gravity="center_vertical" />
 			        
 			    <TextView
-			        android:id="@+id/order_price"
+			        android:id="@+id/order_price_sum"
 			        android:layout_width="wrap_content"
 			        android:layout_height="match_parent"
 			        android:layout_alignParentRight="true"
@@ -165,6 +165,7 @@
 		    </RelativeLayout>
 		    
 		    <Button
+		        android:id="@+id/order_cancel_button"
 		        android:layout_width="match_parent"
 		        android:layout_height="46dp"
 		        android:text="取消"
@@ -176,6 +177,7 @@
 		        android:background="@drawable/button_view" />
 		    
 		    <Button
+		        android:id="@+id/order_submit_button"
 		        android:layout_width="match_parent"
 		        android:layout_height="46dp"
 		        android:text="确认订单"
@@ -184,6 +186,7 @@
 		        android:layout_marginTop="10dp"
 		        android:layout_marginLeft="8dp"
 		        android:layout_marginRight="8dp"
+		        android:layout_marginBottom="10dp"
 		        android:background="@drawable/button_view" />
 		    
 		</LinearLayout>

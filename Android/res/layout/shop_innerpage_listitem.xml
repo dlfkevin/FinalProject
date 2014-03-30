@@ -27,7 +27,8 @@
             android:orientation="horizontal"
             android:layout_alignParentRight="true"
             android:gravity="center_vertical"
-            android:layout_marginRight="10dp" >
+            android:layout_marginRight="10dp"
+            android:visibility="invisible" >
             
             <ImageButton
                 android:id="@+id/shop_menu_item_minus"

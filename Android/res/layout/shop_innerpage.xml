@@ -37,15 +37,25 @@
         android:layout_alignParentBottom="true"
         android:background="#ffffff">
         
-	    <TextView
-	        android:id="@+id/shop_innerpage_price_sum"
+        <TextView
+	        android:id="@+id/price_sum_left"
 	        android:layout_width="wrap_content"
 	        android:layout_height="match_parent"
-	        android:text="总计：￥20"
+	        android:text="总计:￥"
 	        android:textSize="20sp"
 	        android:textColor="#fb8130"
 	        android:layout_marginLeft="16dp"
 	        android:gravity="center_vertical" />
+        
+	    <TextView
+	        android:id="@+id/shop_innerpage_price_sum"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:text=""
+	        android:textSize="20sp"
+	        android:textColor="#fb8130"
+	        android:gravity="center_vertical"
+	        android:layout_toRightOf="@id/price_sum_left" />
 	    
 	    <ImageButton
 	        android:id="@+id/shop_innerpage_order_ok"

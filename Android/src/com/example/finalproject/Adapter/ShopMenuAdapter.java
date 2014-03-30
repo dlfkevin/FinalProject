@@ -3,7 +3,9 @@ package com.example.finalproject.Adapter;
 import java.util.List;
 
 import com.example.finalproject.R;
+import com.example.finalproject.R.id;
 
+import android.R.integer;
 import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -21,12 +23,15 @@ public class ShopMenuAdapter extends BaseAdapter{
 	private Context context;
 	private LayoutInflater mInflater;
 	private int price_sum = 0;
-	private ImageButton minusButton, plusButton;
-	private LinearLayout mlLayout;
+	private TextView priceSum;
+	private int[] amount;
 	
-	public ShopMenuAdapter(List<ShopMenuCard> data, Context context){
+	public ShopMenuAdapter(List<ShopMenuCard> data, Context context, TextView priceSum, int[] amount){
 		this.data = data;
 		this.context = context;
+		this.priceSum = priceSum;
+		this.amount = amount;
+		priceSum.setText(Integer.toString(price_sum));
 		mInflater = LayoutInflater.from(context);
 	}
 	
@@ -51,6 +56,7 @@ public class ShopMenuAdapter extends BaseAdapter{
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		final ViewHolder holder;
+		final int current_pos = position;
 		if(convertView==null){
 			convertView = mInflater.inflate(R.layout.shop_innerpage_listitem, null);
 			
@@ -60,9 +66,9 @@ public class ShopMenuAdapter extends BaseAdapter{
 			holder.order = (TextView) convertView.findViewById(R.id.single_day_orders);
 			holder.comment = (TextView) convertView.findViewById(R.id.order_comment);
 			holder.single_order_amount = (TextView) convertView.findViewById(R.id.order_amount);
-			minusButton = (ImageButton) convertView.findViewById(R.id.shop_menu_item_minus);
-			plusButton = (ImageButton) convertView.findViewById(R.id.shop_menu_item_plus);
-			mlLayout = (LinearLayout) convertView.findViewById(R.id.single_item_amount_layout);
+			holder.minusButton = (ImageButton) convertView.findViewById(R.id.shop_menu_item_minus);
+			holder.plusButton = (ImageButton) convertView.findViewById(R.id.shop_menu_item_plus);
+			holder.mlLayout = (LinearLayout) convertView.findViewById(R.id.single_item_amount_layout);
 			
 			convertView.setTag(holder);
 		}else{
@@ -75,10 +81,12 @@ public class ShopMenuAdapter extends BaseAdapter{
 		holder.price.setText("￥"+Integer.toString(holder.price_int));
 		holder.order.setText(card.getSingleDayOrder());
 		holder.comment.setText(card.getOrderComment());
-		holder.single_order_amount.setText("0");
-		
-		//初始状态下增加减少和数量对应的控件都不做显示
-		mlLayout.setVisibility(View.INVISIBLE);
+		if (amount[current_pos] == 0) {
+			holder.mlLayout.setVisibility(View.INVISIBLE);
+		}else {
+			holder.mlLayout.setVisibility(View.VISIBLE);
+		}
+		holder.single_order_amount.setText(Integer.toString(amount[current_pos]));
 		
 		//对整个item进行监听
 		convertView.setOnClickListener(new OnClickListener() {
@@ -86,55 +94,61 @@ public class ShopMenuAdapter extends BaseAdapter{
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				if (holder.count == 0) {
-					holder.count = 1;
-					holder.single_order_amount.setText(Integer.toString(holder.count));
-					mlLayout.setVisibility(View.VISIBLE);
+				if (amount[current_pos] == 0) {
+					amount[current_pos] = 1;
+					Log.i("test", current_pos+"-------"+amount[current_pos]);
+					price_sum += holder.price_int;
+					holder.single_order_amount.setText(Integer.toString(amount[current_pos]));
+					priceSum.setText(Integer.toString(price_sum));
+					holder.mlLayout.setVisibility(View.VISIBLE);
 				}
 			}
 		});
 		
 		//单个item被下单数量减少按钮的监听
-		minusButton.setOnClickListener(new OnClickListener() {
+		holder.minusButton.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				if (holder.count > 0) {
-					holder.count -= 1;
-					Log.i("test", "-----------"+Integer.toString(holder.count));
+				if (amount[current_pos] > 0) {
+					amount[current_pos] -= 1;
+					Log.i("test", current_pos+"-------"+amount[current_pos]);
 					price_sum -= holder.price_int;
-					holder.single_order_amount.setText(Integer.toString(holder.count));
-					if (holder.count == 0) {
-						//minusButton.setVisibility(View.INVISIBLE);
-						Log.i("test", "-----------fxxk");
+					holder.single_order_amount.setText(Integer.toString(amount[current_pos]));
+					priceSum.setText(Integer.toString(price_sum));
+					if (amount[current_pos] == 0) {
+						holder.mlLayout.setVisibility(View.INVISIBLE);
 					}
 				}
 			}
 		});
 		
 		//单个item被下单数量增加按钮的监听
-		plusButton.setOnClickListener(new OnClickListener() {
+		holder.plusButton.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				holder.count += 1;
-				holder.single_order_amount.setText(Integer.toString(holder.count));
-				minusButton.setVisibility(View.INVISIBLE);
+				amount[current_pos] += 1;
+				Log.i("test", current_pos+"-------"+amount[current_pos]);
+				price_sum += holder.price_int;
+				holder.single_order_amount.setText(Integer.toString(amount[current_pos]));
+				priceSum.setText(Integer.toString(price_sum));
 			}
 		});
 		
 		return convertView;
 	}
 	
-	static class ViewHolder{
+	class ViewHolder{
 		TextView itemName;
 		TextView price;
 		TextView order;
 		TextView comment;
 		TextView single_order_amount;
-		int count = 0;
+		LinearLayout mlLayout;
 		int price_int;
+		ImageButton minusButton, plusButton;
 	}
 }

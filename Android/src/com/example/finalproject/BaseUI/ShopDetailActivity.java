@@ -22,6 +22,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.TextView;
 
 public class ShopDetailActivity extends Activity{
 	private BackTitleBar btb;
@@ -30,6 +31,10 @@ public class ShopDetailActivity extends Activity{
 	private ListView mListView;
 	private List<ShopMenuCard> data = new ArrayList<ShopMenuCard>();
 	private ImageButton submit;
+	private TextView priceSum;
+	private String[] name;
+	private int[] single_price;
+	private int[] amount;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -44,15 +49,23 @@ public class ShopDetailActivity extends Activity{
 	
 	public void MenuListInit(){
 		mListView = (ListView) this.findViewById(R.id.shop_innerpage_menulist);
+		priceSum = (TextView) this.findViewById(R.id.shop_innerpage_price_sum);
 		MenuListDataInit();
-		ShopMenuAdapter mAdapter = new ShopMenuAdapter(data, this);
+		ShopMenuAdapter mAdapter = new ShopMenuAdapter(data, this, priceSum, amount);
 		mListView.setAdapter(mAdapter);
 	}
 	
 	public void MenuListDataInit(){
 		ShopMenuCard card;
+		int len = 6;
+		name = new String[len];
+		single_price = new int[len];
+		amount = new int[len];
 		for (int i = 0; i < 6; i++) {
-			card = new ShopMenuCard("Ö¥Ê¿ÃÃÃÃ", 20+i, Integer.toString(1024+i), Integer.toString(2048+i));
+			name[i] = "Cheese Lady" + Integer.toString(i);
+			single_price[i] = 20+i;
+			amount[i] = 0;
+			card = new ShopMenuCard(name[i], single_price[i], Integer.toString(1024+i), Integer.toString(2048+i));
 			data.add(card);
 		}
 	}
@@ -84,7 +97,10 @@ public class ShopDetailActivity extends Activity{
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				Intent intent = new Intent(ShopDetailActivity.this, OrderConfirmActivity.class);
-				Log.i("test", "-----------i am here-----------");
+				intent.putExtra("order_name", name);
+				intent.putExtra("single_price", single_price);
+				intent.putExtra("amount", amount);
+				intent.putExtra("priceSum", priceSum.getText().toString());
 				startActivity(intent);
 			}
 		});
