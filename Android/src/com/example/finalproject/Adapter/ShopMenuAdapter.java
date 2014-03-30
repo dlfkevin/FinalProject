@@ -96,7 +96,6 @@ public class ShopMenuAdapter extends BaseAdapter{
 				// TODO Auto-generated method stub
 				if (amount[current_pos] == 0) {
 					amount[current_pos] = 1;
-					Log.i("test", current_pos+"-------"+amount[current_pos]);
 					price_sum += holder.price_int;
 					holder.single_order_amount.setText(Integer.toString(amount[current_pos]));
 					priceSum.setText(Integer.toString(price_sum));
@@ -113,7 +112,6 @@ public class ShopMenuAdapter extends BaseAdapter{
 				// TODO Auto-generated method stub
 				if (amount[current_pos] > 0) {
 					amount[current_pos] -= 1;
-					Log.i("test", current_pos+"-------"+amount[current_pos]);
 					price_sum -= holder.price_int;
 					holder.single_order_amount.setText(Integer.toString(amount[current_pos]));
 					priceSum.setText(Integer.toString(price_sum));
@@ -131,7 +129,6 @@ public class ShopMenuAdapter extends BaseAdapter{
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				amount[current_pos] += 1;
-				Log.i("test", current_pos+"-------"+amount[current_pos]);
 				price_sum += holder.price_int;
 				holder.single_order_amount.setText(Integer.toString(amount[current_pos]));
 				priceSum.setText(Integer.toString(price_sum));

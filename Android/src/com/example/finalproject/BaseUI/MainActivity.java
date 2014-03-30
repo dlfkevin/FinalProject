@@ -321,7 +321,7 @@ public class MainActivity extends Activity implements OnTouchListener{
 		}
 	}
 	
-	@Override
+	@Override//系统后退按钮事件重写
 	public boolean onKeyDown(int keyCode, KeyEvent event){
 		if (keyCode == KeyEvent.KEYCODE_BACK
                 && event.getRepeatCount() == 0) {

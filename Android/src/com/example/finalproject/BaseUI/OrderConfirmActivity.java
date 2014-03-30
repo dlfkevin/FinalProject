@@ -131,7 +131,8 @@ public class OrderConfirmActivity extends Activity{
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
 						// TODO Auto-generated method stub
-						Intent intent = new Intent(OrderConfirmActivity.this, OrderDetailActivity.class);
+						Intent intent = new Intent(OrderConfirmActivity.this, myOrderActivity.class);
+						OrderConfirmActivity.this.finish();
 						startActivity(intent);
 					}
 				})
